@@ -1,3 +1,4 @@
 #!/bin/bash
 domain1 = $1;
 domain2
+domain3
