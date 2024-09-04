@@ -15,9 +15,9 @@ jobs:
     - name: Deploy to Raspberry Pi
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.RASPBERRY_PI_IP }}
-        username: ${{ secrets.PI_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
+        host: ${{ secrets.hostname }}
+        username: ${{ secrets.user }}
+        key: ${{ secrets.key }}
         port: 22
         script: |
           cd /home/pi/anya/test_git
