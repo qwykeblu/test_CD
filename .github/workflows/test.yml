@@ -20,5 +20,9 @@ jobs:
         key: ${{ secrets.key }}
         port: 22
         script: |
-          cd /home/pi/anya/test_git
-          git pull
+          if [ -d "/home/pi/anya/test_git/.git" ]; then
+            cd /home/pi/anya/test_git
+            git pull
+          else
+            git clone https://github.com/yourusername/yourrepository.git /home/pi/anya/test_git
+          fi
